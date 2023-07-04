@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import NavigationBar from './components/NavigationBar';
+import LatestRelease from './components/LatestRelease';
 
-function App() {
+
+const App = () => {
+  const [query, setQuery] = useState('');
+  const [selectedAsin, setSelectedAsin] = useState(null);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavigationBar query = {query} setQuery = {setQuery} />
+    <LatestRelease query = {query} selectedAsin = {selectedAsin} setSelectedAsin = {setSelectedAsin} />
+    </>
   );
 }
 

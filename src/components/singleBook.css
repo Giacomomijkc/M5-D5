@@ -1,0 +1,5 @@
+.red-border-with-shadow {
+    border: 2px solid red !important;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
